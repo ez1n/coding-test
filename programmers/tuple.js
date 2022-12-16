@@ -43,3 +43,20 @@ function solution(s) {
   }
   return answer;
 }
+
+// Set 이용한 방법
+
+function solution(s) {
+  let tuple = s.replaceAll("}", "]").replaceAll("{", "[");
+  tuple = JSON.parse(tuple);
+  tuple.sort((a, b) => a.length - b.length);
+
+  const list = new Set();
+  for (let i = 0; i < tuple.length; i++) {
+    for (let j = 0; j < tuple[i].length; j++) {
+      list.add(tuple[i][j])
+    }
+  }
+  return Array.from(list);
+}
+
