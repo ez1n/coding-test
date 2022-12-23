@@ -22,7 +22,7 @@ function solution(s) {
   for (let i = 0; i < word.length; i++) {
     if (word[i] === "") { answer += " " }
     else {
-      const upper = word[i][0].toUpperCase();;
+      const upper = word[i][0].toUpperCase();
       const lower = word[i].substring(1, word[i].length);
       answer += ` ${upper}${lower}`;
     }
