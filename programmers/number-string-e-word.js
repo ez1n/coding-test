@@ -38,8 +38,5 @@ function solution(s) {
     }
   }
 
-  console.log("answer", answer)
   return answer;
 }
-
-solution("one4seveneight")
