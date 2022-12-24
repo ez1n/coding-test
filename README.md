@@ -1,6 +1,6 @@
-# Practice Coding_Test
+## Practice Coding_Test
   
-## 프로그래머스
+### 프로그래머스
 
 | **Lv.1**             | **Lv.2**                |
 | -------------------- | ----------------------- |
@@ -13,7 +13,7 @@
 | 비밀지도             |                         |
 
   
-## 백준 코딩
+### 백준 코딩
 
 [![Solved.ac
 profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=eodrmfdl1004)](https://solved.ac/eodrmfdl1004)
