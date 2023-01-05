@@ -22,14 +22,12 @@ function solution(k, tangerine) {
   tangerines.sort((a, b) => b - a);
 
   for (x of tangerines) {
-    k -= max;
+    k -= x;
     answer++;
     if (k <= 0) break;
   }
 
-  console.log(answer)
   return answer;
 }
 
-solution(6, [1, 3, 2, 5, 4, 5, 2, 3])
 
