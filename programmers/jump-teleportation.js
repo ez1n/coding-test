@@ -18,9 +18,9 @@
  */
 
 function solution(n) {
-  let answer = 1;
+  let answer = 01;
 
-  while (n > 2) {
+  while (n > 0) {
     n % 2 === 1 && answer++;
     n = Math.floor(n / 2);
   }
