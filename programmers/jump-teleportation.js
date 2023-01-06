@@ -18,7 +18,7 @@
  */
 
 function solution(n) {
-  let answer = 01;
+  let answer = 0;
 
   while (n > 0) {
     n % 2 === 1 && answer++;
