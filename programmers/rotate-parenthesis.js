@@ -36,3 +36,30 @@ function solution(s) {
 
   return answer;
 }
+
+// stack 
+
+function solution1(s) {
+  let count = 0;
+  const [openParenthesis, closeParenthesis] = [["(", "{", "["], [")", "}", "]"]];
+
+  for (let i = 0; i < s.length; i++) {
+    if (openParenthesis.includes(s[0])) {
+      let stack = [];
+
+      for (let p of Array.from(s)) {
+        if (openParenthesis.includes(p)) stack.push(p)
+        else {
+          openParenthesis.indexOf(stack[stack.length - 1]) === closeParenthesis.indexOf(p) && stack.pop();
+        }
+      }
+
+      stack.length === 0 && count++;
+    }
+
+    s += s[0];
+    s = s.substr(1, s.length);
+  }
+
+  return count;
+}
