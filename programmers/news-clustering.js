@@ -24,7 +24,7 @@
  * 유사도 값은 0에서 1 사이의 실수이므로, 이를 다루기 쉽도록 65536을 곱한 후에 소수점 아래를 버리고 정수부만 출력한다.
  */
 
-function j(text) {
+function multiSet(text) {
   const pattern = /[A-Z]{2}/;
   let list = [];
   for (let i = 0; i < text.length - 1; i++) {
@@ -35,8 +35,8 @@ function j(text) {
 }
 
 function solution(str1, str2) {
-  const arr1 = j(str1);
-  const arr2 = j(str2);
+  const arr1 = multiSet(str1);
+  const arr2 = multiSet(str2);
   const set = new Set([...arr1, ...arr2]);
 
   if (arr1.length === 0 && arr2.length === 0) return 65536;
@@ -52,4 +52,3 @@ function solution(str1, str2) {
 
   return Math.floor((intersection / union) * 65536);
 }
-
