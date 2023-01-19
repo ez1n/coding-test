@@ -18,10 +18,7 @@
 
 function getDivisorNumber(n, limit) {
   let count = 0;
-  if (n === 1) return 1;
-
   for (let i = 1; i * i <= n; i++) {
-
     if (i * i === n) count++;
     else if (n % i === 0) count += 2;
   }
@@ -31,12 +28,11 @@ function getDivisorNumber(n, limit) {
 
 function solution(number, limit, power) {
   let weight = 0;
+
   for (let i = 1; i < number + 1; i++) {
     const divisor = getDivisorNumber(i, limit);
-    console.log(i, divisor);
     divisor <= limit ? weight += divisor : weight += power;
   }
 
   return weight;
 }
-console.log(solution(10, 3, 2))
