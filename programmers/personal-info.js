@@ -39,10 +39,10 @@
  */
 
 function isExpireDate(today, date, term) {
-  const [year, month, day] = date.split(".").map(Number);
-  const [curYear, curMonth, curDay] = today.split(".").map(Number);
-  const expireDate = year * 28 * 12 + month * 28 + day + term * 28;
-  const currentDate = curYear * 28 * 12 + curMonth * 28 + curDay;
+  const [cy, cm, cd] = date.split(".").map(Number);
+  const [ty, tm, td] = today.split(".").map(Number);
+  const expireDate = cy * 28 * 12 + cm * 28 + cd + term * 28;
+  const currentDate = ty * 28 * 12 + tm * 28 + td;
 
   return currentDate >= expireDate;
 }
@@ -52,8 +52,8 @@ function solution(today, terms, privacies) {
   terms.map(item => term[item.split(" ")[0]] = item.split(" ")[1]);
 
   return privacies.reduce((arr, privacy, index) => {
-    const [date, type] = privacy.split(" ");
-    const expire = isExpireDate(today, date, term[type]);
+    const [date, term] = privacy.split(" ");
+    const expire = isExpireDate(today, date, term[term]);
 
     if (expire) return arr.concat(index + 1);
     return arr;
