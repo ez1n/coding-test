@@ -29,7 +29,6 @@ function solution(participant, completion) {
   }
 
   map.forEach((value, key) => {
-    console.log(key)
     if (value > 0) {
       answer = key;
       return;
