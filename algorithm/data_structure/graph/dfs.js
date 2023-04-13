@@ -54,11 +54,12 @@ class Graph {
     let result = [];
 
     stack.push(start);
+    visited[start] = true;
+
     while (stack.length) {
       const vertex = stack.pop();
-
       result.push(vertex);
-      visited[vertex] = true;
+
       for (let v of this.adjacencyList[vertex]) {
         if (visited[v]) continue;
 
