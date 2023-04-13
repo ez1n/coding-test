@@ -87,7 +87,5 @@ g.addEdge("D", "E");
 g.addEdge("D", "F");
 g.addEdge("E", "F");
 
-//console.log(g.depthFirstRecursive("A")); // [ 'A', 'B', 'D', 'E', 'C', 'F' ]
-console.log(g);
-
+console.log(g.depthFirstRecursive("A")); // [ 'A', 'B', 'D', 'E', 'C', 'F' ]
 console.log(g.depthFirstIterative("A")); // [ 'A', 'C', 'E', 'F', 'D', 'B' ]
