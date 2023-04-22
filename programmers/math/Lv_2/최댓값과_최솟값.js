@@ -9,13 +9,7 @@
  */
 
 function solution(s) {
-  let answer = '';
-  const list = s.split(" ");
-  let numbers = [];
-  for (let i = 0; i < list.length; i++) {
-    numbers.push(parseInt(list[i]));
-  }
-  answer = `${Math.min(...numbers)} ${Math.max(...numbers)}`
-  return answer;
+    const list = s.split(" ");
+    return [Math.min(...list), Math.max(...list)].join(" ");
 }
 
